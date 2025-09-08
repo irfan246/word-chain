@@ -1,0 +1,20 @@
+{
+  "a": ["angsa", "anjing", "ayam"],
+  "b": ["badak", "bangau", "banteng", "bebek", "bekicot", "belalang", "belut", "beruang", "buaya"],
+  "c": ["cacing", "capung", "cicak", "cumi-cumi"],
+  "d": ["domba"],
+  "g": ["gajah", "gorila", "gurita"],
+  "h": ["harimau", "hiu"],
+  "i": ["ikan", "itik"],
+  "j": ["jangkrik", "jerapah"],
+  "k": ["kadal", "kalajengking", "kalkun", "kambing", "kancil", "kangguru", "kelelawar", "kelinci", "kepiting", "kera", "kerang", "koala", "komodo", "kucing", "kuda", "kumbang", "kupu-kupu", "kura-kura"],
+  "l": ["laba-laba", "lalat", "landak", "lebah", "lele", "lumba-lumba", "luwak"],
+  "m": ["macan", "marmut", "merak", "monyet"],
+  "n": ["nyamuk"],
+  "p": ["panda", "paus", "penguin", "penyu"],
+  "r": ["rubah", "rusa"],
+  "s": ["sapi", "semut", "serigala", "singa", "siput"],
+  "t": ["tapir", "tawon", "teripang", "tikus", "tupai"],
+  "u": ["ubur-ubur", "udang", "ular", "ulat", "unta"],
+  "z": ["zebra"]
+}
