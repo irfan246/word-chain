@@ -6898,7 +6898,7 @@
           "value": "0"
         },
         {
-          "name": "Spawn",
+          "name": "Click",
           "type": "number",
           "value": 0
         }
@@ -8505,7 +8505,13 @@
           "name": "Papan2",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "pos",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -8567,7 +8573,13 @@
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "pos",
+              "type": "number",
+              "value": 0
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "string": "Text",
@@ -9213,6 +9225,7 @@
       },
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9495,6 +9508,28 @@
                 },
                 {
                   "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Papan2",
+                    "pos",
+                    "=",
+                    "I"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Text_Jawaban",
+                    "pos",
+                    "=",
+                    "I"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
@@ -9633,6 +9668,7 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "infiniteLoopWarning": true,
                   "type": "BuiltinCommonInstructions::While",
                   "whileConditions": [
@@ -9682,6 +9718,43 @@
                             "Text",
                             "=",
                             "Data[Letter[0]][I]"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ArrayTools::Shuffle"
+                          },
+                          "parameters": [
+                            "",
+                            "Letter",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "Text_Jawaban"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::Value"
+                          },
+                          "parameters": [
+                            "Text_Jawaban",
+                            "Text",
+                            "=",
+                            "Text_Soal.Text::Value()"
                           ]
                         }
                       ],
@@ -9927,12 +10000,12 @@
             },
             {
               "type": {
-                "value": "StringVariable"
+                "value": "NumberVariable"
               },
               "parameters": [
-                "Answer",
+                "Click",
                 "=",
-                "\"0\""
+                "0"
               ]
             },
             {
@@ -9976,6 +10049,16 @@
                 "=",
                 "Text_Jawaban.Text::Value()"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Click",
+                "=",
+                "1"
+              ]
             }
           ],
           "events": [
@@ -10014,6 +10097,30 @@
                 },
                 {
                   "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Papan2",
+                    "=",
+                    "968",
+                    "=",
+                    "339 + 120 * Papan2.pos"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Text_Jawaban",
+                    "=",
+                    "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
+                    "=",
+                    "395 + 120 * Text_Jawaban.pos"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
                   "parameters": [
@@ -10031,6 +10138,26 @@
                     "Generate",
                     "True",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Click",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "LastLetterCompare",
+                    "\"info\"",
+                    ""
                   ]
                 }
               ]
