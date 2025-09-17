@@ -1,7 +1,7 @@
 {
   "firstLayout": "Home",
   "gdVersion": {
-    "build": 239,
+    "build": 240,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -697,6 +697,110 @@
         "name": "papan2.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "coin coklat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "coin coklat.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "coin emas.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "coin emas.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "coin silver.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "coin silver.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat5.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat6.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat7.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat8.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat9.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "selamat10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "selamat10.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -835,6 +939,11 @@
       "name": "isProgres",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "Generate",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -858,7 +967,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2725359896772935,
+        "zoomFactor": 0.22336005893811428,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1260,6 +1369,22 @@
           "x": 918,
           "y": 319,
           "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 680,
+          "layer": "Setting",
+          "name": "Background_Setting",
+          "persistentUuid": "304fa1cd-62a8-4aa6-988d-dbb37b91993a",
+          "width": 424,
+          "x": 428,
+          "y": 20,
+          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3305,6 +3430,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background_Setting",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "default",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "background popup.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 111
+                          },
+                          {
+                            "x": 848,
+                            "y": 111
+                          },
+                          {
+                            "x": 848,
+                            "y": 1185
+                          },
+                          {
+                            "x": 0,
+                            "y": 1185
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -3366,6 +3551,9 @@
           },
           {
             "objectName": "Coin_3"
+          },
+          {
+            "objectName": "Background_Setting"
           }
         ]
       },
@@ -3584,6 +3772,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3682,6 +3871,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4356,7 +4546,7 @@
           "isLocked": false,
           "name": "",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [
             {
               "defaultSize": true,
@@ -4505,7 +4695,7 @@
           "isLocked": false,
           "name": "Setting",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -6701,6 +6891,16 @@
           "name": "StartLetter",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "Answer",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "Spawn",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -7146,6 +7346,54 @@
           "x": 25,
           "y": 633,
           "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 860,
+          "layer": "Reward",
+          "name": "Karakter",
+          "persistentUuid": "f7d45938-2097-4c01-a185-f51651843fcd",
+          "width": 499,
+          "x": 60,
+          "y": 44,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Reward",
+          "name": "Coin_Reward",
+          "persistentUuid": "691e6410-5ff9-4eb2-b94d-444f60ff4523",
+          "width": 0,
+          "x": 730,
+          "y": 57,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 312,
+          "layer": "Reward",
+          "name": "Selamat",
+          "persistentUuid": "692fc2cd-1c07-43e1-998f-70a388f11ba1",
+          "width": 714,
+          "x": 566,
+          "y": 360,
+          "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8353,6 +8601,546 @@
             "lineHeight": 0,
             "color": "255;255;255"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Coin_Reward",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "perak",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "coin silver.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 7
+                          },
+                          {
+                            "x": 351,
+                            "y": 7
+                          },
+                          {
+                            "x": 351,
+                            "y": 354
+                          },
+                          {
+                            "x": 3,
+                            "y": 354
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "coklat",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "coin coklat.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 7
+                          },
+                          {
+                            "x": 351,
+                            "y": 7
+                          },
+                          {
+                            "x": 351,
+                            "y": 354
+                          },
+                          {
+                            "x": 3,
+                            "y": 354
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "emas",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "coin emas.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 7
+                          },
+                          {
+                            "x": 351,
+                            "y": 7
+                          },
+                          {
+                            "x": 351,
+                            "y": 354
+                          },
+                          {
+                            "x": 3,
+                            "y": 354
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Selamat",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.2,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "selamat10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 96,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 112
+                          },
+                          {
+                            "x": 896,
+                            "y": 336
+                          },
+                          {
+                            "x": 96,
+                            "y": 336
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -8378,6 +9166,9 @@
           },
           {
             "objectName": "Karakter"
+          },
+          {
+            "objectName": "Coin_Reward"
           },
           {
             "objectName": "Background_Dialog"
@@ -8414,6 +9205,9 @@
           },
           {
             "objectName": "Text_Jawaban"
+          },
+          {
+            "objectName": "Selamat"
           }
         ]
       },
@@ -8515,13 +9309,23 @@
             },
             {
               "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "Soal",
+                "=",
+                "Data[Letter[0]][0]"
+              ]
+            },
+            {
+              "type": {
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
                 "Text_Soal",
                 "Text",
                 "=",
-                "Data[Letter[0]][0]"
+                "Soal"
               ]
             },
             {
@@ -8531,7 +9335,7 @@
               "parameters": [
                 "LastLetterCompare",
                 "=",
-                "StrAt(Data[Letter[0]][0], StrLength(Data[Letter[0]][0]) -  1)"
+                "StrAt(Soal, StrLength(Soal) -  1)"
               ]
             },
             {
@@ -8574,361 +9378,19 @@
                 "Data[LastLetterCompare]",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "Generate",
+                "True",
+                "1"
+              ]
             }
           ],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "3",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Papan2",
-                    "968",
-                    "339 + 120 * i",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResizableCapability::ResizableBehavior::SetSize"
-                  },
-                  "parameters": [
-                    "Papan2",
-                    "Resizable",
-                    "290",
-                    "110"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "Text_Jawaban",
-                    "Text_Jawaban",
-                    "348",
-                    "982",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetCenter"
-                  },
-                  "parameters": [
-                    "Text_Jawaban",
-                    "=",
-                    "Papan2.PointX(\"Center\")",
-                    "=",
-                    "400 + 120 * i"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "i",
-                    "+",
-                    "1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "i",
-                    "=",
-                    "3"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "i",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Text_Jawaban",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "random",
-                        "=",
-                        "RandomInRange(0,1)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ArrayTools::Shuffle"
-                      },
-                      "parameters": [
-                        "",
-                        "Letter",
-                        ""
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "folded": true,
-                      "infiniteLoopWarning": true,
-                      "type": "BuiltinCommonInstructions::While",
-                      "whileConditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "Data[Letter[0]][i]",
-                            "=",
-                            "\"0\""
-                          ]
-                        }
-                      ],
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ArrayTools::Shuffle"
-                          },
-                          "parameters": [
-                            "",
-                            "Letter",
-                            ""
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "AjoutObjConcern"
-                              },
-                              "parameters": [
-                                "",
-                                "Text_Jawaban"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "TextContainerCapability::TextContainerBehavior::Value"
-                              },
-                              "parameters": [
-                                "Text_Jawaban",
-                                "Text",
-                                "=",
-                                "Data[Letter[0]][i]"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ArrayTools::Shuffle"
-                              },
-                              "parameters": [
-                                "",
-                                "Letter",
-                                ""
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "Data[Letter[0]][i]",
-                            "!=",
-                            "\"0\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "Text_Jawaban",
-                            "Text",
-                            "=",
-                            "Data[Letter[0]][i]"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "i",
-                            "+",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Kalau randomnya ketemu 1 dan juga kondisi masih blum ada yang sama, masukan satu data jawaban benar"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "random",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "sama",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "Text_Jawaban",
-                            "Text",
-                            "=",
-                            "Data[LastLetterCompare][0]"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "sama",
-                            "=",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Kalau sudah sampai loop terakhir tapi masih blum dapat random 1 nya juga"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "i",
-                            "=",
-                            "3"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "sama",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "Text_Jawaban",
-                            "Text",
-                            "=",
-                            "Data[LastLetterCompare][0]"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "variables": [
-                {
-                  "name": "random",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -8963,6 +9425,109 @@
                     "Text",
                     "=",
                     "\"Tema: Buah\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Function Generate"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "3",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Papan2",
+                    "968",
+                    "339 + 120 * I",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "Papan2",
+                    "Resizable",
+                    "290",
+                    "110"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "Text_Jawaban",
+                    "Text_Jawaban",
+                    "348",
+                    "982",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCenter"
+                  },
+                  "parameters": [
+                    "Text_Jawaban",
+                    "=",
+                    "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
+                    "=",
+                    "395 + 120 * I"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "I",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "I",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "I",
+                    "=",
+                    "0"
                   ]
                 }
               ]
@@ -9011,6 +9576,464 @@
               "name": "i",
               "type": "number",
               "value": 0
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "I",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Generate",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Text_Jawaban",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "random",
+                    "=",
+                    "RandomInRange(0,1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ArrayTools::Shuffle"
+                  },
+                  "parameters": [
+                    "",
+                    "Letter",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "infiniteLoopWarning": true,
+                  "type": "BuiltinCommonInstructions::While",
+                  "whileConditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Data[Letter[0]][I]",
+                        "=",
+                        "\"0\""
+                      ]
+                    }
+                  ],
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ArrayTools::Shuffle"
+                      },
+                      "parameters": [
+                        "",
+                        "Letter",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutObjConcern"
+                          },
+                          "parameters": [
+                            "",
+                            "Text_Jawaban"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::Value"
+                          },
+                          "parameters": [
+                            "Text_Jawaban",
+                            "Text",
+                            "=",
+                            "Data[Letter[0]][I]"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ArrayTools::Shuffle"
+                          },
+                          "parameters": [
+                            "",
+                            "Letter",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Data[Letter[0]][I]",
+                        "!=",
+                        "\"0\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Text_Jawaban",
+                        "Text",
+                        "=",
+                        "Data[Letter[0]][I]"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "I",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Kalau randomnya ketemu 1 dan juga kondisi masih blum ada yang sama, masukan satu data jawaban benar"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "random",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "sama",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Text_Jawaban",
+                        "Text",
+                        "=",
+                        "Data[LastLetterCompare][0]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "sama",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Kalau sudah sampai loop terakhir tapi masih blum dapat random 1 nya juga"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "I",
+                        "=",
+                        "3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "sama",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Text_Jawaban",
+                        "Text",
+                        "=",
+                        "Data[LastLetterCompare][0]"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "I",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "Generate",
+                        "False",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "I",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "random",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Papan Jawaban",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "StringVariable"
+              },
+              "parameters": [
+                "Answer",
+                "=",
+                "\"0\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Papan2",
+                "=",
+                "762",
+                "=",
+                "136"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Text_Jawaban",
+                "=",
+                "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
+                "=",
+                "190"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "Answer",
+                "=",
+                "Text_Jawaban.Text::Value()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "StrAt(Answer, 0)",
+                    "=",
+                    "LastLetterCompare"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "Soal",
+                    "=",
+                    "Answer"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Text_Soal",
+                    "Text",
+                    "=",
+                    "Soal"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Generate",
+                    "True",
+                    "1"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9511,6 +10534,59 @@
           "isLightingLayer": false,
           "isLocked": false,
           "name": "Dialog2",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Reward",
           "renderingType": "",
           "visibility": false,
           "cameras": [],
@@ -12004,6 +13080,7 @@
               "extraInformation": [
                 "TextContainerCapability::TextContainerBehavior"
               ],
+              "choices": [],
               "name": "Text"
             },
             {
