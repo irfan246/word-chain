@@ -6818,11 +6818,6 @@
           "children": []
         },
         {
-          "name": "ListJawaban",
-          "type": "array",
-          "children": []
-        },
-        {
           "name": "Answer",
           "type": "string",
           "value": ""
@@ -9373,21 +9368,21 @@
             },
             {
               "type": {
-                "value": "RemoveVariableAt"
-              },
-              "parameters": [
-                "Data[Letter[0]]",
-                "0"
-              ]
-            },
-            {
-              "type": {
                 "value": "SetStringVariable"
               },
               "parameters": [
                 "LastLetterCompare",
                 "=",
                 "StrAt(Text_Soal.Text::Value(), StrLength(Text_Soal.Text::Value()) -  1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveVariableAt"
+              },
+              "parameters": [
+                "Data[Letter[0]]",
+                "0"
               ]
             },
             {
@@ -9557,27 +9552,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Text_Soal",
-                    "Text",
-                    "=",
-                    "Answer"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "LastLetterCompare",
-                    "=",
-                    "StrAt(Text_Soal.Text::Value(), StrLength(Text_Soal.Text::Value()) -  1)"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "ClearVariableChildren"
                   },
                   "parameters": [
@@ -9592,6 +9566,55 @@
                     "Generate",
                     "True",
                     "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "VariableChildCount(Data[Letter[0]])",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Text_Soal",
+                        "Text",
+                        "=",
+                        "Answer"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "LastLetterCompare",
+                        "=",
+                        "StrAt(Text_Soal.Text::Value(), StrLength(Text_Soal.Text::Value()) -  1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "RemoveVariableAt"
+                      },
+                      "parameters": [
+                        "Data[Letter[0]]",
+                        "StrFind(Data[Letter[0]], Answer)"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -9702,19 +9725,39 @@
               ]
             },
             {
-              "disabled": true,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Repeat",
               "repeatExpression": "2",
               "conditions": [],
               "actions": [
                 {
                   "type": {
+                    "value": "ArrayTools::Shuffle"
+                  },
+                  "parameters": [
+                    "",
+                    "Letter",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "RandIndex",
+                    "=",
+                    "RandomInRange(0, VariableChildCount(Data[Letter[0]]) - 1)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "SetStringVariable"
                   },
                   "parameters": [
-                    "HurufAcakTerpilih",
+                    "KataAcak",
                     "=",
-                    "ToString(RandomInRange(0, VariableChildCount(Data) - 1))"
+                    "Data[Letter[0]][RandIndex]"
                   ]
                 }
               ],
@@ -9724,12 +9767,58 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                        "value": "StringVariable"
                       },
                       "parameters": [
-                        "VariableChildCount(Data[HurufAcakTerpilih])",
-                        ">",
-                        "0"
+                        "KataAcak",
+                        "!=",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "KataAcak",
+                        "!=",
+                        "\"0\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PushString"
+                      },
+                      "parameters": [
+                        "JawabanList",
+                        "KataAcak"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "Text_Jawaban"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::Value"
+                      },
+                      "parameters": [
+                        "Text_Jawaban",
+                        "Text",
+                        "=",
+                        "\"0\""
                       ]
                     }
                   ],
@@ -9740,17 +9829,7 @@
                       },
                       "parameters": [
                         "",
-                        "Data[Letter[0]]",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "DebuggerTools::ConsoleLog"
-                      },
-                      "parameters": [
-                        "Data[HurufAcakTerpilih]",
-                        "\"info\"",
+                        "Letter",
                         ""
                       ]
                     },
@@ -9761,67 +9840,37 @@
                       "parameters": [
                         "RandIndex",
                         "=",
-                        "RandomInRange(0, VariableChildCount(Data[HurufAcakTerpilih]) - 1)"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "KataAcak",
-                            "!=",
-                            "\"\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "StringVariable"
-                          },
-                          "parameters": [
-                            "KataAcak",
-                            "!=",
-                            "\"0\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "PushString"
-                          },
-                          "parameters": [
-                            "ListJawaban",
-                            "ToString(KataAcak)"
-                          ]
-                        }
+                        "RandomInRange(0, VariableChildCount(Data[Letter[0]]) - 1)"
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": []
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Text_Jawaban",
+                        "Text",
+                        "=",
+                        "Data[Letter[0]][RandIndex]"
+                      ]
                     },
                     {
-                      "disabled": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "I",
-                            "+",
-                            "1"
-                          ]
-                        }
+                      "type": {
+                        "value": "SetStringVariable"
+                      },
+                      "parameters": [
+                        "KataAcak",
+                        "=",
+                        "Text_Jawaban.Text::Value()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PushString"
+                      },
+                      "parameters": [
+                        "JawabanList",
+                        "KataAcak"
                       ]
                     }
                   ]
@@ -10237,7 +10286,6 @@
         },
         {
           "disabled": true,
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10319,7 +10367,6 @@
           ],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Text_Jawaban",
               "conditions": [],
@@ -10337,7 +10384,6 @@
               ],
               "events": [
                 {
-                  "folded": true,
                   "infiniteLoopWarning": true,
                   "type": "BuiltinCommonInstructions::While",
                   "whileConditions": [
