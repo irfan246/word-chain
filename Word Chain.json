@@ -6818,6 +6818,11 @@
           "children": []
         },
         {
+          "name": "Answer",
+          "type": "string",
+          "value": ""
+        },
+        {
           "name": "GenerateNext",
           "type": "number",
           "value": 0
@@ -6891,11 +6896,6 @@
           "name": "StartLetter",
           "type": "string",
           "value": ""
-        },
-        {
-          "name": "Answer",
-          "type": "string",
-          "value": "0"
         },
         {
           "name": "Click",
@@ -9225,7 +9225,6 @@
       },
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9348,7 +9347,7 @@
               "parameters": [
                 "LastLetterCompare",
                 "=",
-                "StrAt(Soal, StrLength(Soal) -  1)"
+                "StrAt(Text_Soal.Text::Value(), StrLength(Text_Soal.Text::Value()) -  1)"
               ]
             },
             {
@@ -9368,7 +9367,7 @@
               "parameters": [
                 "",
                 "Data[Letter[0]]",
-                "UsedAnswer",
+                "DataUsed",
                 ""
               ]
             },
@@ -9619,6 +9618,185 @@
           "conditions": [
             {
               "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Papan Jawaban",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Click",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Papan2",
+                "=",
+                "762",
+                "=",
+                "136"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Text_Jawaban",
+                "=",
+                "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
+                "=",
+                "190"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Click",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "Answer",
+                "=",
+                "Text_Jawaban.Text::Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "JawabanList",
+                "=",
+                "Answer"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "StrAt(Answer, 0)",
+                    "=",
+                    "LastLetterCompare"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Papan2",
+                    "=",
+                    "968",
+                    "=",
+                    "339 + 120 * Papan2.pos"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Text_Jawaban",
+                    "=",
+                    "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
+                    "=",
+                    "395 + 120 * Text_Jawaban.pos"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Text_Soal",
+                    "Text",
+                    "=",
+                    "Answer"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Click",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Generate",
+                    "True",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "NumberVariable"
               },
               "parameters": [
@@ -9638,23 +9816,34 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "LastLetterCompare",
+                "=",
+                "StrAt(Text_Soal.Text::Value(), StrLength(Text_Soal.Text::Value()) -  1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "sama",
+                "=",
+                "0"
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Text_Jawaban",
               "conditions": [],
               "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "random",
-                    "=",
-                    "RandomInRange(0,1)"
-                  ]
-                },
                 {
                   "type": {
                     "value": "ArrayTools::Shuffle"
@@ -9685,6 +9874,16 @@
                   ],
                   "conditions": [],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "random",
+                        "=",
+                        "RandomInRange(0,1)"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "ArrayTools::Shuffle"
@@ -9972,195 +10171,6 @@
               "name": "random",
               "type": "number",
               "value": 0
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Papan Jawaban",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "MouseButtonFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Left\""
-              ]
-            },
-            {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "Click",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Papan2",
-                "=",
-                "762",
-                "=",
-                "136"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Text_Jawaban",
-                "=",
-                "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
-                "=",
-                "190"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetStringVariable"
-              },
-              "parameters": [
-                "Answer",
-                "=",
-                "Text_Jawaban.Text::Value()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "Click",
-                "=",
-                "1"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareStrings"
-                  },
-                  "parameters": [
-                    "StrAt(Answer, 0)",
-                    "=",
-                    "LastLetterCompare"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringVariable"
-                  },
-                  "parameters": [
-                    "Soal",
-                    "=",
-                    "Answer"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.8"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "Papan2",
-                    "=",
-                    "968",
-                    "=",
-                    "339 + 120 * Papan2.pos"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "Text_Jawaban",
-                    "=",
-                    "Papan2.X() + Papan2.Width()/2 - Text_Jawaban.Width()/2",
-                    "=",
-                    "395 + 120 * Text_Jawaban.pos"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Text_Soal",
-                    "Text",
-                    "=",
-                    "Soal"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "Generate",
-                    "True",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "Click",
-                    "=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "LastLetterCompare",
-                    "\"info\"",
-                    ""
-                  ]
-                }
-              ]
             }
           ]
         },
@@ -10547,6 +10557,22 @@
                 "\"shuffle:\"+ Data.LasLetter[0]",
                 "\"info\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01K5DCQ1HD9KG2SJF1W8334PSW",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "RemoveVariableChild"
+              },
+              "parameters": [
+                "Data",
+                "Answer"
               ]
             }
           ]
