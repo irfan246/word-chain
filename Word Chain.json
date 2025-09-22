@@ -1377,123 +1377,6 @@
     },
     {
       "folded": true,
-      "name": "Level",
-      "type": "structure",
-      "children": [
-        {
-          "name": "1",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "3",
-          "type": "number",
-          "value": 0
-        }
-      ]
-    },
-    {
-      "folded": true,
-      "name": "Step",
-      "type": "structure",
-      "children": [
-        {
-          "name": "Level1",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "Level2",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "Level3",
-          "type": "number",
-          "value": 0
-        }
-      ]
-    },
-    {
-      "folded": true,
-      "name": "Coin",
-      "type": "structure",
-      "children": [
-        {
-          "folded": true,
-          "name": "Level1",
-          "type": "structure",
-          "children": [
-            {
-              "name": "1",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "2",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "3",
-              "type": "number",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "name": "Level2",
-          "type": "structure",
-          "children": [
-            {
-              "name": "1",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "2",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "3",
-              "type": "number",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "name": "Level3",
-          "type": "structure",
-          "children": [
-            {
-              "name": "1",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "2",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "3",
-              "type": "number",
-              "value": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "folded": true,
       "name": "isClick",
       "type": "structure",
       "children": [
@@ -1529,6 +1412,134 @@
       "name": "Generate",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "TempLoad",
+      "type": "string",
+      "value": "0"
+    },
+    {
+      "name": "Data",
+      "type": "structure",
+      "children": [
+        {
+          "folded": true,
+          "name": "Coin",
+          "type": "structure",
+          "children": [
+            {
+              "folded": true,
+              "name": "Level1",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "2",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "3",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "name": "Level2",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "2",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "3",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "name": "Level3",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "2",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "3",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "Level",
+          "type": "structure",
+          "children": [
+            {
+              "name": "1",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "2",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "3",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "folded": true,
+          "name": "Step",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Level1",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Level2",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Level3",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "layouts": [
@@ -6843,7 +6854,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Storage",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6867,20 +6877,47 @@
                   },
                   "parameters": [
                     "\"Data\"",
-                    "\"Level\"",
+                    "\"Data\"",
                     "",
-                    "Level"
+                    "TempLoad"
                   ]
                 },
                 {
                   "type": {
-                    "value": "ReadStringFromStorage"
+                    "value": "JSONToVariableStructure2"
                   },
                   "parameters": [
-                    "\"Data\"",
-                    "\"Coin\"",
-                    "",
-                    "Coin"
+                    "TempLoad",
+                    "Data"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.1",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "isProgres",
+                        "=",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -6980,7 +7017,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     ">",
                     "0"
                   ]
@@ -6990,7 +7027,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.1",
+                    "Data.Level.1",
                     "=",
                     "1"
                   ]
@@ -7000,7 +7037,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.2",
+                    "Data.Level.2",
                     "=",
                     "1"
                   ]
@@ -7010,7 +7047,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.3",
+                    "Data.Level.3",
                     "=",
                     "1"
                   ]
@@ -7834,7 +7871,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "0"
                   ]
@@ -7844,7 +7881,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "0"
                   ]
@@ -7854,7 +7891,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "0"
                   ]
@@ -7864,7 +7901,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "0"
                   ]
@@ -7874,7 +7911,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "0"
                   ]
@@ -7884,7 +7921,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "0"
                   ]
@@ -7894,7 +7931,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "0"
                   ]
@@ -7904,7 +7941,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "0"
                   ]
@@ -7914,7 +7951,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "0"
                   ]
@@ -7924,7 +7961,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Level.2",
+                    "Data.Level.2",
                     "=",
                     "0"
                   ]
@@ -7934,7 +7971,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Level.3",
+                    "Data.Level.3",
                     "=",
                     "0"
                   ]
@@ -8226,7 +8263,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "1"
                   ]
@@ -8265,7 +8302,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "2"
                   ]
@@ -8304,7 +8341,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "3"
                   ]
@@ -8360,7 +8397,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "1"
                   ]
@@ -8399,7 +8436,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "2"
                   ]
@@ -8438,7 +8475,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "3"
                   ]
@@ -8489,7 +8526,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "1"
                   ]
@@ -8528,7 +8565,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "2"
                   ]
@@ -8567,7 +8604,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "3"
                   ]
@@ -8631,7 +8668,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "1"
                   ]
@@ -8670,7 +8707,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "2"
                   ]
@@ -8709,7 +8746,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "3"
                   ]
@@ -8765,7 +8802,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "1"
                   ]
@@ -8804,7 +8841,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "2"
                   ]
@@ -8843,7 +8880,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "3"
                   ]
@@ -8894,7 +8931,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "1"
                   ]
@@ -8933,7 +8970,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "2"
                   ]
@@ -8972,7 +9009,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "3"
                   ]
@@ -9036,7 +9073,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "1"
                   ]
@@ -9075,7 +9112,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "2"
                   ]
@@ -9114,7 +9151,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "3"
                   ]
@@ -9170,7 +9207,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "1"
                   ]
@@ -9209,7 +9246,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "2"
                   ]
@@ -9248,7 +9285,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "3"
                   ]
@@ -9299,7 +9336,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "1"
                   ]
@@ -9338,7 +9375,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "2"
                   ]
@@ -9377,7 +9414,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "3"
                   ]
@@ -10003,6 +10040,59 @@
                   "parameters": [
                     "",
                     "\"Setting\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Button_Menu",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "scene",
+                    "=",
+                    "\"Home\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Loading\"",
+                    ""
                   ]
                 }
               ]
@@ -14268,20 +14358,9 @@
                   },
                   "parameters": [
                     "\"Data\"",
-                    "\"Level\"",
-                    "",
-                    "Level"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ReadStringFromStorage"
-                  },
-                  "parameters": [
                     "\"Data\"",
-                    "\"Coin\"",
                     "",
-                    "Coin"
+                    "TempLoad"
                   ]
                 },
                 {
@@ -14312,6 +14391,34 @@
                     "isClick.Level3",
                     "=",
                     "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "TempLoad",
+                        "!=",
+                        "\"0\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure2"
+                      },
+                      "parameters": [
+                        "TempLoad",
+                        "Data"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -14357,7 +14464,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.1",
+                    "Data.Level.1",
                     "=",
                     "1"
                   ]
@@ -14420,7 +14527,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     ">",
                     "0"
                   ]
@@ -14430,7 +14537,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     ">",
                     "0"
                   ]
@@ -14440,7 +14547,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     ">",
                     "0"
                   ]
@@ -14452,7 +14559,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Level.2",
+                    "Data.Level.2",
                     "=",
                     "1"
                   ]
@@ -14463,8 +14570,8 @@
                   },
                   "parameters": [
                     "\"Data\"",
-                    "\"Level\"",
-                    "ToJSON(Level)"
+                    "\"Data\"",
+                    "ToJSON(Data)"
                   ]
                 }
               ]
@@ -14510,7 +14617,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.2",
+                    "Data.Level.2",
                     "=",
                     "1"
                   ]
@@ -14573,7 +14680,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     ">",
                     "0"
                   ]
@@ -14583,7 +14690,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     ">",
                     "0"
                   ]
@@ -14593,7 +14700,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     ">",
                     "0"
                   ]
@@ -14605,7 +14712,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Level.3",
+                    "Data.Level.3",
                     "=",
                     "1"
                   ]
@@ -14631,7 +14738,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.2",
+                    "Data.Level.2",
                     "=",
                     "1"
                   ]
@@ -14670,7 +14777,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -14680,7 +14787,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "1"
                       ]
@@ -14690,7 +14797,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -14775,7 +14882,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -14785,7 +14892,274 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Animation",
+                        "=",
+                        "\"unlock\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Tween",
+                        "\"lock\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Chain",
+                        "Tween",
+                        "\"chain\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Lock",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Coin bronze 2 + Coin Silver 1"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.1",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.2",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.3",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Animation",
+                        "=",
+                        "\"unlock\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Tween",
+                        "\"lock\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Chain",
+                        "Tween",
+                        "\"chain\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Lock",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.1",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.2",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.3",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Animation",
+                        "=",
+                        "\"unlock\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Tween",
+                        "\"lock\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Chain",
+                        "Tween",
+                        "\"chain\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Lock",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.1",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.2",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -14862,7 +15236,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -14872,7 +15246,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -14882,7 +15256,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -14947,7 +15321,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -14957,7 +15331,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "1"
                       ]
@@ -14967,7 +15341,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -15032,7 +15406,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -15042,7 +15416,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -15052,7 +15426,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -15129,7 +15503,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -15139,7 +15513,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -15149,7 +15523,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -15214,7 +15588,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -15224,7 +15598,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -15234,7 +15608,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -15299,7 +15673,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -15309,7 +15683,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -15319,7 +15693,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -15396,7 +15770,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -15406,7 +15780,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -15416,7 +15790,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -15493,7 +15867,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -15570,7 +15944,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -15580,7 +15954,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -15590,7 +15964,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -15655,7 +16029,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -15665,7 +16039,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -15675,7 +16049,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -15740,7 +16114,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -15750,7 +16124,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -15760,7 +16134,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -15837,7 +16211,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -15847,7 +16221,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "1"
                       ]
@@ -15857,7 +16231,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -15922,7 +16296,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -15932,7 +16306,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -15942,7 +16316,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -16007,7 +16381,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -16017,7 +16391,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "1"
                       ]
@@ -16027,7 +16401,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -16104,7 +16478,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -16114,7 +16488,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -16124,7 +16498,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -16189,7 +16563,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -16199,7 +16573,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "1"
                       ]
@@ -16209,7 +16583,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -16274,7 +16648,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -16284,7 +16658,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -16294,7 +16668,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "1"
                       ]
@@ -16371,7 +16745,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "2"
                       ]
@@ -16381,7 +16755,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -16391,7 +16765,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -16456,7 +16830,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -16466,7 +16840,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "2"
                       ]
@@ -16476,7 +16850,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -16541,7 +16915,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -16551,7 +16925,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -16561,7 +16935,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -16638,7 +17012,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -16648,7 +17022,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.2",
+                        "Data.Coin.Level1.2",
                         "=",
                         "3"
                       ]
@@ -16658,7 +17032,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "3"
                       ]
@@ -16758,7 +17132,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.3",
+                    "Data.Level.3",
                     "=",
                     "1"
                   ]
@@ -16822,7 +17196,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.3",
+                    "Data.Level.3",
                     "=",
                     "1"
                   ]
@@ -16861,7 +17235,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "1"
                       ]
@@ -16871,7 +17245,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "1"
                       ]
@@ -16881,7 +17255,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -16966,7 +17340,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -16976,7 +17350,274 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Animation",
+                        "=",
+                        "\"unlock\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Tween",
+                        "\"lock\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Chain",
+                        "Tween",
+                        "\"chain\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Lock",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Coin bronze 2 + Coin Silver 1"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.1",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.2",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.3",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Animation",
+                        "=",
+                        "\"unlock\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Tween",
+                        "\"lock\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Chain",
+                        "Tween",
+                        "\"chain\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Lock",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.1",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.2",
+                        "=",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.3",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Animation",
+                        "=",
+                        "\"unlock\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Padlock",
+                        "Tween",
+                        "\"lock\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "Chain",
+                        "Tween",
+                        "\"chain\"",
+                        "0",
+                        "\"linear\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Lock",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.1",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.2",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Data.Coin.Level2.3",
                         "=",
                         "2"
                       ]
@@ -17053,7 +17694,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "1"
                       ]
@@ -17063,7 +17704,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17073,7 +17714,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "2"
                       ]
@@ -17138,7 +17779,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -17148,7 +17789,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "1"
                       ]
@@ -17158,7 +17799,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "2"
                       ]
@@ -17223,7 +17864,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -17233,7 +17874,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17243,7 +17884,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -17320,7 +17961,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "3"
                       ]
@@ -17330,7 +17971,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17340,7 +17981,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.3",
+                        "Data.Coin.Level1.3",
                         "=",
                         "2"
                       ]
@@ -17405,7 +18046,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -17415,7 +18056,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -17425,7 +18066,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "2"
                       ]
@@ -17490,7 +18131,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -17500,7 +18141,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17510,7 +18151,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -17587,7 +18228,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -17597,7 +18238,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17607,7 +18248,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "2"
                       ]
@@ -17684,7 +18325,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "3"
                       ]
@@ -17761,7 +18402,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "3"
                       ]
@@ -17771,7 +18412,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17781,7 +18422,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -17846,7 +18487,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -17856,7 +18497,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -17866,7 +18507,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -17931,7 +18572,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "1"
                       ]
@@ -17941,7 +18582,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -17951,7 +18592,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -18028,7 +18669,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "3"
                       ]
@@ -18038,7 +18679,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "1"
                       ]
@@ -18048,7 +18689,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -18113,7 +18754,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -18123,7 +18764,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -18133,7 +18774,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -18198,7 +18839,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "1"
                       ]
@@ -18208,7 +18849,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "1"
                       ]
@@ -18218,7 +18859,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -18295,7 +18936,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "1"
                       ]
@@ -18305,7 +18946,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -18315,7 +18956,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -18380,7 +19021,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -18390,7 +19031,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "1"
                       ]
@@ -18400,7 +19041,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -18465,7 +19106,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -18475,7 +19116,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -18485,7 +19126,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "1"
                       ]
@@ -18562,7 +19203,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "2"
                       ]
@@ -18572,7 +19213,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -18582,7 +19223,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -18647,7 +19288,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -18657,7 +19298,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "2"
                       ]
@@ -18667,7 +19308,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -18732,7 +19373,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level1.1",
+                        "Data.Coin.Level1.1",
                         "=",
                         "3"
                       ]
@@ -18742,7 +19383,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -18752,7 +19393,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "2"
                       ]
@@ -18829,7 +19470,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.1",
+                        "Data.Coin.Level2.1",
                         "=",
                         "3"
                       ]
@@ -18839,7 +19480,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.2",
+                        "Data.Coin.Level2.2",
                         "=",
                         "3"
                       ]
@@ -18849,7 +19490,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Coin.Level2.3",
+                        "Data.Coin.Level2.3",
                         "=",
                         "3"
                       ]
@@ -19345,7 +19986,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "1"
                   ]
@@ -19384,7 +20025,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "2"
                   ]
@@ -19423,7 +20064,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "3"
                   ]
@@ -19479,7 +20120,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "1"
                   ]
@@ -19518,7 +20159,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "2"
                   ]
@@ -19557,7 +20198,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "3"
                   ]
@@ -19608,7 +20249,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "1"
                   ]
@@ -19647,7 +20288,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "2"
                   ]
@@ -19686,7 +20327,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "3"
                   ]
@@ -19750,7 +20391,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "1"
                   ]
@@ -19789,7 +20430,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "2"
                   ]
@@ -19828,7 +20469,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "3"
                   ]
@@ -19884,7 +20525,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "1"
                   ]
@@ -19923,7 +20564,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "2"
                   ]
@@ -19962,7 +20603,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "3"
                   ]
@@ -20013,7 +20654,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "1"
                   ]
@@ -20052,7 +20693,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "2"
                   ]
@@ -20091,7 +20732,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "3"
                   ]
@@ -20155,7 +20796,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "1"
                   ]
@@ -20194,7 +20835,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "2"
                   ]
@@ -20233,7 +20874,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "3"
                   ]
@@ -20289,7 +20930,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "1"
                   ]
@@ -20328,7 +20969,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "2"
                   ]
@@ -20367,7 +21008,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "3"
                   ]
@@ -20418,7 +21059,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "1"
                   ]
@@ -20457,7 +21098,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "2"
                   ]
@@ -20496,7 +21137,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "3"
                   ]
@@ -21403,7 +22044,7 @@
       ],
       "variables": [
         {
-          "name": "Data",
+          "name": "DataJawaban",
           "type": "structure",
           "children": []
         },
@@ -24007,7 +24648,6 @@
       },
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -24071,7 +24711,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.1",
+                    "Data.Level.1",
                     "=",
                     "1"
                   ]
@@ -24106,7 +24746,7 @@
                   "parameters": [
                     "",
                     "data_level_1.json",
-                    "Data",
+                    "DataJawaban",
                     ""
                   ]
                 },
@@ -24128,7 +24768,7 @@
                     "Text_Soal",
                     "Text",
                     "=",
-                    "Data[Letter[0]][0]"
+                    "DataJawaban[Letter[0]][0]"
                   ]
                 },
                 {
@@ -24146,7 +24786,7 @@
                     "value": "RemoveVariableAt"
                   },
                   "parameters": [
-                    "Data[Letter[0]]",
+                    "DataJawaban[Letter[0]]",
                     "0"
                   ]
                 },
@@ -24168,6 +24808,16 @@
                     "Kata",
                     "=",
                     "63"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "isGameOver",
+                    "=",
+                    "0"
                   ]
                 },
                 {
@@ -24222,7 +24872,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.2",
+                    "Data.Level.2",
                     "=",
                     "1"
                   ]
@@ -24257,7 +24907,7 @@
                   "parameters": [
                     "",
                     "data_level_2.json",
-                    "Data",
+                    "DataJawaban",
                     ""
                   ]
                 },
@@ -24279,7 +24929,7 @@
                     "Text_Soal",
                     "Text",
                     "=",
-                    "Data[Letter[0]][0]"
+                    "DataJawaban[Letter[0]][0]"
                   ]
                 },
                 {
@@ -24297,7 +24947,7 @@
                     "value": "RemoveVariableAt"
                   },
                   "parameters": [
-                    "Data[Letter[0]]",
+                    "DataJawaban[Letter[0]]",
                     "0"
                   ]
                 },
@@ -24319,6 +24969,16 @@
                     "Kata",
                     "=",
                     "67"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "isGameOver",
+                    "=",
+                    "0"
                   ]
                 },
                 {
@@ -24373,7 +25033,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Level.3",
+                    "Data.Level.3",
                     "=",
                     "1"
                   ]
@@ -24408,7 +25068,7 @@
                   "parameters": [
                     "",
                     "data_level_3.json",
-                    "Data",
+                    "DataJawaban",
                     ""
                   ]
                 },
@@ -24430,7 +25090,7 @@
                     "Text_Soal",
                     "Text",
                     "=",
-                    "Data[Letter[0]][0]"
+                    "DataJawaban[Letter[0]][0]"
                   ]
                 },
                 {
@@ -24448,7 +25108,7 @@
                     "value": "RemoveVariableAt"
                   },
                   "parameters": [
-                    "Data[Letter[0]]",
+                    "DataJawaban[Letter[0]]",
                     "0"
                   ]
                 },
@@ -24470,6 +25130,16 @@
                     "Kata",
                     "=",
                     "124"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "isGameOver",
+                    "=",
+                    "0"
                   ]
                 },
                 {
@@ -24644,7 +25314,7 @@
                     "value": "RemoveVariableAt"
                   },
                   "parameters": [
-                    "Data[LastLetterCompare]",
+                    "DataJawaban[LastLetterCompare]",
                     "Answer"
                   ]
                 },
@@ -24706,7 +25376,7 @@
                         "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "VariableChildCount(Data[Letter[0]])",
+                        "VariableChildCount(DataJawaban[Letter[0]])",
                         ">",
                         "0"
                       ]
@@ -24898,7 +25568,6 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -24947,16 +25616,10 @@
                     "value": "BuiltinCommonInstructions::CompareNumbers"
                   },
                   "parameters": [
-                    "VariableChildCount(Data[LastLetterCompare])",
+                    "VariableChildCount(DataJawaban[LastLetterCompare])",
                     ">",
                     "0"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [
@@ -24966,7 +25629,7 @@
                   },
                   "parameters": [
                     "",
-                    "Data[LastLetterCompare]",
+                    "DataJawaban[LastLetterCompare]",
                     ""
                   ]
                 },
@@ -24976,7 +25639,7 @@
                   },
                   "parameters": [
                     "JawabanList",
-                    "Data[LastLetterCompare][0]"
+                    "DataJawaban[LastLetterCompare][0]"
                   ]
                 }
               ]
@@ -25004,7 +25667,7 @@
                   "parameters": [
                     "RandIndex",
                     "=",
-                    "RandomInRange(0, VariableChildCount(Data[Letter[0]]) - 1)"
+                    "RandomInRange(0, VariableChildCount(DataJawaban[Letter[0]]) - 1)"
                   ]
                 },
                 {
@@ -25014,7 +25677,7 @@
                   "parameters": [
                     "KataAcak",
                     "=",
-                    "Data[Letter[0]][RandIndex]"
+                    "DataJawaban[Letter[0]][RandIndex]"
                   ]
                 }
               ],
@@ -25082,7 +25745,7 @@
                       "parameters": [
                         "RandIndex",
                         "=",
-                        "RandomInRange(0, VariableChildCount(Data[Letter[0]]) - 1)"
+                        "RandomInRange(0, VariableChildCount(DataJawaban[Letter[0]]) - 1)"
                       ]
                     },
                     {
@@ -25092,7 +25755,7 @@
                       "parameters": [
                         "KataAcak",
                         "=",
-                        "Data[Letter[0]][RandIndex]"
+                        "DataJawaban[Letter[0]][RandIndex]"
                       ]
                     }
                   ]
@@ -25127,7 +25790,6 @@
               "comment": "Ngacak letter"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -25135,22 +25797,15 @@
                     "value": "BuiltinCommonInstructions::CompareNumbers"
                   },
                   "parameters": [
-                    "VariableChildCount(Data[LastLetterCompare])",
+                    "VariableChildCount(DataJawaban[LastLetterCompare])",
                     "=",
                     "0"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "3",
                   "conditions": [],
@@ -25172,7 +25827,7 @@
                       "parameters": [
                         "RandIndex",
                         "=",
-                        "RandomInRange(0, VariableChildCount(Data[Letter[0]]) - 1)"
+                        "RandomInRange(0, VariableChildCount(DataJawaban[Letter[0]]) - 1)"
                       ]
                     },
                     {
@@ -25182,7 +25837,7 @@
                       "parameters": [
                         "KataAcak",
                         "=",
-                        "Data[Letter[0]][RandIndex]"
+                        "DataJawaban[Letter[0]][RandIndex]"
                       ]
                     }
                   ],
@@ -25820,7 +26475,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Level.3",
+                        "Data.Level.3",
                         "=",
                         "1"
                       ]
@@ -25837,7 +26492,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level3.1",
+                            "Data.Coin.Level3.1",
                             "=",
                             "0"
                           ]
@@ -25847,7 +26502,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level3",
+                            "Data.Step.Level3",
                             "=",
                             "1"
                           ]
@@ -25863,36 +26518,6 @@
                             "=",
                             "0"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
-                          ]
                         }
                       ],
                       "events": [
@@ -25916,7 +26541,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.1",
+                                "Data.Coin.Level3.1",
                                 "=",
                                 "3"
                               ]
@@ -25943,7 +26568,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.1",
+                                "Data.Coin.Level3.1",
                                 "=",
                                 "2"
                               ]
@@ -25970,9 +26595,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.1",
+                                "Data.Coin.Level3.1",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -25988,7 +26649,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level3.2",
+                            "Data.Coin.Level3.2",
                             "=",
                             "0"
                           ]
@@ -25998,7 +26659,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level3",
+                            "Data.Step.Level3",
                             "=",
                             "2"
                           ]
@@ -26020,39 +26681,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Step.Level3",
+                            "Data.Step.Level3",
                             "=",
                             "2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -26077,7 +26708,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.2",
+                                "Data.Coin.Level3.2",
                                 "=",
                                 "3"
                               ]
@@ -26104,7 +26735,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.2",
+                                "Data.Coin.Level3.2",
                                 "=",
                                 "2"
                               ]
@@ -26131,9 +26762,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.2",
+                                "Data.Coin.Level3.2",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -26149,7 +26816,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level3.3",
+                            "Data.Coin.Level3.3",
                             "=",
                             "0"
                           ]
@@ -26159,7 +26826,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level3",
+                            "Data.Step.Level3",
                             "=",
                             "3"
                           ]
@@ -26181,39 +26848,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Step.Level3",
+                            "Data.Step.Level3",
                             "=",
                             "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -26238,7 +26875,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.3",
+                                "Data.Coin.Level3.3",
                                 "=",
                                 "3"
                               ]
@@ -26265,7 +26902,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.3",
+                                "Data.Coin.Level3.3",
                                 "=",
                                 "2"
                               ]
@@ -26292,9 +26929,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level3.3",
+                                "Data.Coin.Level3.3",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -26322,7 +26995,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Level.2",
+                        "Data.Level.2",
                         "=",
                         "1"
                       ]
@@ -26339,7 +27012,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level2.3",
+                            "Data.Coin.Level2.3",
                             "=",
                             "0"
                           ]
@@ -26349,7 +27022,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level2",
+                            "Data.Step.Level2",
                             "=",
                             "3"
                           ]
@@ -26365,36 +27038,6 @@
                             "=",
                             "0"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
-                          ]
                         }
                       ],
                       "events": [
@@ -26418,7 +27061,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.3",
+                                "Data.Coin.Level2.3",
                                 "=",
                                 "3"
                               ]
@@ -26445,7 +27088,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.3",
+                                "Data.Coin.Level2.3",
                                 "=",
                                 "2"
                               ]
@@ -26472,9 +27115,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.3",
+                                "Data.Coin.Level2.3",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -26490,7 +27169,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level2.2",
+                            "Data.Coin.Level2.2",
                             "=",
                             "0"
                           ]
@@ -26500,7 +27179,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level2",
+                            "Data.Step.Level2",
                             "=",
                             "2"
                           ]
@@ -26522,39 +27201,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Step.Level2",
+                            "Data.Step.Level2",
                             "=",
                             "2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -26579,7 +27228,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.2",
+                                "Data.Coin.Level2.2",
                                 "=",
                                 "3"
                               ]
@@ -26606,7 +27255,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.2",
+                                "Data.Coin.Level2.2",
                                 "=",
                                 "2"
                               ]
@@ -26633,9 +27282,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.2",
+                                "Data.Coin.Level2.2",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -26651,7 +27336,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level2.1",
+                            "Data.Coin.Level2.1",
                             "=",
                             "0"
                           ]
@@ -26661,7 +27346,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level2",
+                            "Data.Step.Level2",
                             "=",
                             "1"
                           ]
@@ -26683,39 +27368,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Step.Level2",
+                            "Data.Step.Level2",
                             "=",
                             "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -26740,7 +27395,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.1",
+                                "Data.Coin.Level2.1",
                                 "=",
                                 "3"
                               ]
@@ -26767,7 +27422,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.1",
+                                "Data.Coin.Level2.1",
                                 "=",
                                 "2"
                               ]
@@ -26794,9 +27449,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level2.1",
+                                "Data.Coin.Level2.1",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -26806,7 +27497,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -26824,7 +27514,7 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Level.1",
+                        "Data.Level.1",
                         "=",
                         "1"
                       ]
@@ -26841,7 +27531,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level1.3",
+                            "Data.Coin.Level1.3",
                             "=",
                             "0"
                           ]
@@ -26851,7 +27541,17 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level1",
+                            "Data.Coin.Level1.2",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Data.Step.Level1",
                             "=",
                             "2"
                           ]
@@ -26866,36 +27566,6 @@
                             "Click",
                             "=",
                             "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -26920,7 +27590,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.3",
+                                "Data.Coin.Level1.3",
                                 "=",
                                 "3"
                               ]
@@ -26947,7 +27617,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.3",
+                                "Data.Coin.Level1.3",
                                 "=",
                                 "2"
                               ]
@@ -26974,9 +27644,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.3",
+                                "Data.Coin.Level1.3",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -26992,7 +27698,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level1.2",
+                            "Data.Coin.Level1.2",
                             "=",
                             "0"
                           ]
@@ -27002,7 +27708,17 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level1",
+                            "Data.Coin.Level1.1",
+                            ">",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Data.Step.Level1",
                             "=",
                             "1"
                           ]
@@ -27024,39 +27740,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Step.Level1",
+                            "Data.Step.Level1",
                             "=",
                             "2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -27081,7 +27767,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.2",
+                                "Data.Coin.Level1.2",
                                 "=",
                                 "3"
                               ]
@@ -27108,7 +27794,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.2",
+                                "Data.Coin.Level1.2",
                                 "=",
                                 "2"
                               ]
@@ -27135,9 +27821,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.2",
+                                "Data.Coin.Level1.2",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -27153,7 +27875,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Coin.Level1.1",
+                            "Data.Coin.Level1.1",
                             "=",
                             "0"
                           ]
@@ -27163,7 +27885,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "Step.Level1",
+                            "Data.Step.Level1",
                             "=",
                             "0"
                           ]
@@ -27185,39 +27907,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "Step.Level1",
+                            "Data.Step.Level1",
                             "=",
                             "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Data\"",
-                            "\"Coin\"",
-                            "ToJSON(Coin)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringVariable"
-                          },
-                          "parameters": [
-                            "scene",
-                            "=",
-                            "\"Level\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Loading\"",
-                            ""
                           ]
                         }
                       ],
@@ -27242,7 +27934,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.1",
+                                "Data.Coin.Level1.1",
                                 "=",
                                 "3"
                               ]
@@ -27269,7 +27961,7 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.1",
+                                "Data.Coin.Level1.1",
                                 "=",
                                 "2"
                               ]
@@ -27296,9 +27988,45 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Coin.Level1.1",
+                                "Data.Coin.Level1.1",
                                 "=",
                                 "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Data\"",
+                                "\"Data\"",
+                                "ToJSON(Data)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringVariable"
+                              },
+                              "parameters": [
+                                "scene",
+                                "=",
+                                "\"Level\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Loading\"",
+                                ""
                               ]
                             }
                           ]
@@ -27330,7 +28058,7 @@
                 "value": "NumberVariable"
               },
               "parameters": [
-                "Level.3",
+                "Data.Level.3",
                 "=",
                 "1"
               ]
@@ -27347,7 +28075,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.1",
+                    "Data.Coin.Level3.1",
                     "=",
                     "0"
                   ]
@@ -27357,7 +28085,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level3",
+                    "Data.Step.Level3",
                     "=",
                     "1"
                   ]
@@ -27460,7 +28188,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.2",
+                    "Data.Coin.Level3.2",
                     "=",
                     "0"
                   ]
@@ -27470,7 +28198,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level3",
+                    "Data.Step.Level3",
                     "=",
                     "2"
                   ]
@@ -27573,7 +28301,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level3.3",
+                    "Data.Coin.Level3.3",
                     "=",
                     "0"
                   ]
@@ -27583,7 +28311,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level3",
+                    "Data.Step.Level3",
                     "=",
                     "3"
                   ]
@@ -27698,7 +28426,7 @@
                 "value": "NumberVariable"
               },
               "parameters": [
-                "Level.2",
+                "Data.Level.2",
                 "=",
                 "1"
               ]
@@ -27715,7 +28443,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.1",
+                    "Data.Coin.Level2.1",
                     "=",
                     "0"
                   ]
@@ -27725,7 +28453,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level2",
+                    "Data.Step.Level2",
                     "=",
                     "1"
                   ]
@@ -27828,7 +28556,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.2",
+                    "Data.Coin.Level2.2",
                     "=",
                     "0"
                   ]
@@ -27838,7 +28566,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level2",
+                    "Data.Step.Level2",
                     "=",
                     "2"
                   ]
@@ -27941,7 +28669,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level2.3",
+                    "Data.Coin.Level2.3",
                     "=",
                     "0"
                   ]
@@ -27951,7 +28679,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level2",
+                    "Data.Step.Level2",
                     "=",
                     "3"
                   ]
@@ -28066,7 +28794,7 @@
                 "value": "NumberVariable"
               },
               "parameters": [
-                "Level.1",
+                "Data.Level.1",
                 "=",
                 "1"
               ]
@@ -28083,7 +28811,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.3",
+                    "Data.Coin.Level1.3",
                     "=",
                     "0"
                   ]
@@ -28093,7 +28821,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level1",
+                    "Data.Step.Level1",
                     "=",
                     "2"
                   ]
@@ -28196,7 +28924,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.2",
+                    "Data.Coin.Level1.2",
                     "=",
                     "0"
                   ]
@@ -28206,7 +28934,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level1",
+                    "Data.Step.Level1",
                     "=",
                     "1"
                   ]
@@ -28309,7 +29037,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Coin.Level1.1",
+                    "Data.Coin.Level1.1",
                     "=",
                     "0"
                   ]
@@ -28319,7 +29047,7 @@
                     "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Step.Level1",
+                    "Data.Step.Level1",
                     "=",
                     "0"
                   ]
